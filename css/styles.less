@@ -1,0 +1,456 @@
+/* ====================== */
+/* Colors SAVE*/
+/* ====================== */
+//@joachim-primary: #6fae7f;
+//@joachim-secondary: #de4957;
+//@joachim-bg-section-light: #fff;
+//@joachim-text-light: #888;
+//@joachim-section-header-light: #b1b1b1;
+//@joachim-text-dark: #ddd;
+//@joachim-bg-section-dark: #555;
+//@joachim-section-header-dark: #999;
+
+
+@joachim-primary: #6fae7f;
+@joachim-secondary: #de4957;
+@joachim-bg-section-light: #F5F2ED;
+@joachim-bg-section-dark: #fff;
+@joachim-text-main: #666;
+@joachim-text-white: #fff;
+@joachim-text-black: #000;
+
+
+
+
+
+/* ====================== */
+/* GENERAL */
+/* ====================== */
+body {
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  color: #888;
+  position: relative;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 200;
+}
+
+a {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+a:focus {
+  outline: none;
+}
+
+a:hover {
+  text-decoration: none
+}
+
+p {
+  line-height: 2;
+}
+
+.page-content {
+  padding-bottom: 120px;
+}
+
+.page-content h1 {
+  font-weight: 400;
+  font-size: 25px;
+  margin: 90px 0;
+  text-align: center;
+}
+
+.accent-background {
+  background-image: url('../img/bg-shade.png');
+  background-repeat: no-repeat;
+  background-size: 75%;
+}
+
+h1 i {
+  padding-right: 16px;
+}
+
+h1 span {
+  color: @joachim-secondary;
+}
+
+/* ====================== */
+/* Button styles */
+/* ====================== */
+.btn {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  outline: none;
+  border-radius: 0;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.btn-main {
+  border: 3px solid @joachim-secondary;
+  color: @joachim-secondary;
+}
+
+.btn-main:hover,
+.btn-main:active {
+  color: @joachim-text-white;
+  background-color: @joachim-secondary;
+}
+
+.btn-main-inverse {
+  border: 3px solid @joachim-text-white;
+  color: @joachim-text-white;
+}
+
+.btn-main-inverse:hover,
+.btn-main-inverse:active {
+  color: @joachim-secondary;
+  background-color: @joachim-text-white;
+}
+
+/* ====================== */
+/* NAVIGATION */
+/* ====================== */
+.navbar {
+  min-height: 60px;
+  padding: 9px 20px 9px 10px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.navbar-default .navbar-nav > .active > a {
+  background-image: none;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color: @joachim-primary;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: @joachim-primary;
+  background-color: transparent;
+}
+
+.navbar-brand,
+.navbar-default .navbar-nav > li > a {
+  color: #999;
+  text-shadow: none;
+}
+
+.navbar-static-top,
+.navbar-fixed-top,
+.navbar-fixed-bottom {
+  border-radius: 0;
+}
+
+.nav-open.navbar {
+  top: 0;
+}
+
+.nav-close.navbar {
+  top: -71px;
+}
+
+.navbar-brand {
+  font-size: 22px;
+}
+
+.navbar-default .navbar-collapse {
+  border-color: @joachim-primary;
+}
+
+/* Navigation for lg and md screens */
+@media only screen and (min-width: 769px) {
+  .navbar .navbar-nav li i {
+    font-size: 1.4em;
+    position: relative;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+  .navbar .navbar-nav li:hover i,
+  .navbar .navbar-nav li.active i {
+    transform: translateY(-5px);
+  }
+
+  .navbar .navbar-nav li span {
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 10px;
+  }
+
+  .navbar .navbar-nav li:hover span,
+  .navbar .navbar-nav li.active span {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    transform: translateY(5px);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .page-content h1 {
+    margin: 70px 0;
+  }
+
+  .navbar {
+    padding: 0;
+    min-height: 0;
+  }
+
+  .navbar-default .navbar-toggle,
+  .navbar-default .navbar-toggle:hover,
+  .navbar-default .navbar-toggle:focus {
+    border: none;
+    background-color: #ddd;
+    padding: 18px 18px;
+    margin: 0;
+    border-radius: 0;
+    background-color: @joachim-primary;
+  }
+
+  .navbar-default .navbar-toggle .icon-bar {
+    background-color: @joachim-text-main;
+  }
+
+  .navbar-fixed-top .navbar-collapse {
+    max-height: none;
+    overflow-y: hidden;
+    background-color: @joachim-primary;
+  }
+
+  .navbar-nav {
+    margin: 0 -15px;
+  }
+
+  .nav > li {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+  }
+
+  .nav > li:last-child {
+    border-bottom: none;
+  }
+
+  .navbar-default .navbar-nav > li > a {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: @joachim-text-main;
+    font-size: 20px;
+    font-weight: 300;
+  }
+
+  .navbar-default .navbar-nav > li > a i {
+    margin-right: 20px;
+  }
+
+  .navbar-default .navbar-nav > .active > a,
+  .navbar-default .navbar-nav > .active > a:hover,
+  .navbar-default .navbar-nav > .active > a:focus {
+    color: @joachim-text-main;
+    background-color: rgba(255, 255, 255, 0.14);
+  }
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px) {
+
+}
+
+/* ====================== */
+/* HEADER */
+/* ====================== */
+.site-header {
+  background-color: @joachim-primary;
+  padding-top: 120px;
+  color: @joachim-text-white;
+  text-align: center;
+}
+
+.site-header .header-catcher {
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.site-header .header-catcher span, .header-catcher i {
+  color: #363f48;
+  font-size: 22px;
+}
+
+.header-catcher {
+  font-weight: 500;
+}
+
+.header-catcher span {
+  font-family: 'Pacifico', Helvetica, Arial, sans-serif;
+}
+
+.site-header .page-description {
+  margin: 0 auto;
+  width: 60%;
+  padding: 50px 0 90px;
+  line-height: 1.3;
+}
+
+/* ====================== */
+/* DARK Section style */
+/* ====================== */
+.dark-tone.page-content {
+  background-color: @joachim-bg-section-dark;
+  color: @joachim-text-main;
+}
+
+.dark-tone.page-content h1, .dark-tone.page-content h2 {
+  color: @joachim-text-main;
+}
+
+/* ====================== */
+/* BRIGHT Section style */
+/* ====================== */
+.bright-tone.page-content {
+  background-color: @joachim-primary;
+  color: @joachim-bg-section-light;
+}
+
+.bright-tone.page-content h1, .bright-tone.page-content h2 {
+  color: @joachim-bg-section-light;
+}
+
+.bright-tone.page-content a {
+  color: @joachim-bg-section-light;
+}
+
+/* ====================== */
+/* LIGHT Section style */
+/* ====================== */
+.light-tone.page-content {
+  background-color: @joachim-bg-section-light;
+  color: @joachim-text-main;
+}
+
+.light-tone.page-content h1, .light-tone.page-content h2 {
+  color: @joachim-text-main;
+}
+
+/* ====================== */
+/* WEB Section */
+/* ====================== */
+.section-web {
+  text-align: center;
+  cursor: default;
+}
+
+.section-web h2 {
+  padding: 10px 0 10px;
+}
+
+.section-web p {
+  font-size: 15px
+}
+
+.section-web .col-sm-4, .section-web .col-sm-4 i {
+  transition: all 0.3s ease;
+}
+
+.section-web .col-sm-4:hover h2, .section-web .col-sm-4:hover p {
+  color: @joachim-text-black;
+}
+
+.section-web .col-sm-4:hover i {
+  transform: scale(1.15);
+  color: @joachim-primary;
+}
+
+/* ====================== */
+/** CONTACT and FOOTER section */
+/* ====================== */
+.section-contact {
+  background-color: @joachim-primary;
+}
+
+.section-contact p {
+  font-size: 20px;
+}
+
+.section-contact a.email-link {
+  display: inline-block;
+  font-size: 3em;
+  margin: 30px 0;
+}
+
+.section-contact a.email-link {
+  font-size: 28px;
+  margin: 30px 0;
+  text-transform: lowercase;
+}
+
+.section-contact a.email-link:hover {
+  color: @joachim-primary;
+}
+
+.section-contact a.email-link i {
+  margin-right: 20px;
+}
+
+.section-contact {
+  padding-bottom: 60px;
+}
+
+ul.social-media {
+  margin: 0 auto;
+  padding: 0;
+  margin-top: 8px;
+  list-style-type: none;
+  display: table;
+}
+
+ul.social-media li {
+  float: left;
+  margin-right: 20px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+ul.social-media li:last-child {
+  margin-right: 0;
+}
+
+ul.social-media li i {
+  font-size: 2em;
+}
+
+ul.social-media li:hover {
+  transform: translateY(-10px);
+  color: @joachim-text-white;
+}
+
+.footer-margin {
+  margin-top: 70px;
+}
+
+p.built {
+  margin-top: 8px;
+  font-size: 16px;
+}
+
+.top-buffer {
+  margin-top: 80px;
+}
