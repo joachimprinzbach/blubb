@@ -18,10 +18,8 @@
   "homepage": "https://github.com/joachimprinzbach/blubb",
   "dependencies": {
     "angular2": "^2.0.0-alpha.21",
-    "axios": "^0.5.4",
     "es6-module-loader": "^0.16.6",
-    "moment": "^2.10.2",
     "systemjs": "^0.16.11",
-    "zone.js": "^0.4.3"
+    "traceur-runtime": "0.0.59"
   }
 }
