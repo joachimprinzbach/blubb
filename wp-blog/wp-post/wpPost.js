@@ -11,7 +11,7 @@ if (typeof __decorate !== "function") __decorate = function (decorators, target,
 if (typeof __metadata !== "function") __metadata = function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var angular2_1 = require("angular2/angular2");
+var annotations_1 = require('angular2/annotations');
 var WpPost = (function () {
     function WpPost() {
     }
@@ -27,14 +27,14 @@ var WpPost = (function () {
         $(id).html(this.postRef.text);
     };
     WpPost = __decorate([
-        angular2_1.Component({
+        annotations_1.Component({
             selector: 'wp-post',
             properties: {
                 'post': 'post-obj',
                 'post2': 'post-obj2'
             }
         }),
-        angular2_1.View({
+        annotations_1.View({
             templateUrl: 'wp-blog/wp-post/view/wp-post.html'
         }), 
         __metadata('design:paramtypes', [])

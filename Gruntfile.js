@@ -2,6 +2,23 @@ module.exports = function (grunt) {
 
     require('load-grunt-tasks')(grunt);
 
+    var lessCreateConfig = function (context, block) {
+        var cfg = {files: []},
+            outfile = path.join(context.outDir, block.dest),
+            filesDef = {};
+
+        filesDef.dest = outfile;
+        filesDef.src = [];
+
+        context.inFiles.forEach(function (inFile) {
+            filesDef.src.push(path.join(context.inDir, inFile));
+        });
+
+        cfg.files.push(filesDef);
+        context.outFiles = [block.dest];
+        return cfg;
+    };
+
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
@@ -10,36 +27,42 @@ module.exports = function (grunt) {
                 src: './index.html', dest: 'dist/index.html'
             },
             img: {
-                src: 'img/bg-shade.png', dest: 'dist/img/bg-shade.png'
+                expand: true, src: ['img/**'], dest: 'dist'
             },
-            favicon: {
-                src: 'img/favicon.png', dest: 'dist/img/favicon.png'
+            fonts: {
+                expand: true, flatten:true, src: ['bower_components/font-awesome/fonts/**'], dest: 'dist/fonts'
             },
             app: {
-                src: 'wp-blog', dest: 'dist/wp-blog'
-            },
-            ng: {
-                src: 'js/angular2.dev.js', dest: 'dist/js/angular2.dev.js'
+                expand: true, src: ['wp-blog/**'], dest: 'dist'
             }
         },
 
         less: {
-           dist: {
+            dev: {
                 files: [
                     {expand: true, cwd: 'css', src: ['*.less'], dest: 'css', ext: '.css'}
                 ],
                 options: {
-                    compress: true, // compressing
+                    compress: false,
+                    sourceMap: false
+                }
+            },
+           dist: {
+                files: [
+                    {expand: true, cwd: 'css', src: ['*.less'], dest: 'dist/css', ext: '.css'}
+                ],
+                options: {
+                    compress: true,
                     sourceMap: false
                 }
             }
         },
 
         'useminPrepare': {
+            html: 'index.html',
             options: {
                 dest: 'dist'
-            },
-            html: 'index.html'
+            }
         },
 
         usemin: {
@@ -48,11 +71,12 @@ module.exports = function (grunt) {
 
         clean: {
             build: ['dist'],
-            temp: ['.tmp']
+            temp: ['.tmp', 'tmp']
         }
 
     });
 
-    grunt.registerTask('default', ['concurrent:dev']);
-    grunt.registerTask('build', ['clean:build', 'less:dist', 'copy:dist', 'copy:img', 'copy:favicon', 'copy:app', 'useminPrepare', 'concat', 'uglify', 'cssmin', 'usemin', 'clean:temp']);
+    grunt.registerTask('build', ['clean:build', 'copy:dist', 'copy:img','copy:fonts', 'copy:app', 'useminPrepare', 'concat', 'uglify', 'cssmin', 'usemin', 'less:dist','clean:temp']);
+    grunt.registerTask('default', ['build']);
+    grunt.registerTask('less', ['less:dev']);
 };

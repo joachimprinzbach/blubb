@@ -1,6 +1,8 @@
 /// <reference path="../typings/angular2/angular2.d.ts" />
 
-import {Component,bootstrap,View, For} from "angular2/angular2";
+import {Component, View} from 'angular2/annotations';
+import {bootstrap} from 'angular2/angular2';
+import {For} from 'angular2/directives';
 import {BlogService} from "wp-blog/service/BlogService";
 import {WpPost} from "wp-blog/wp-post/wpPost";
 import {Post} from "wp-blog/Post";

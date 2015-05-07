@@ -1,7 +1,9 @@
 /// <reference path="../../typings/angular2/angular2.d.ts" />
 /// <reference path="../../typings/jquery/jquery.d.ts" />
 
-import {Component,View} from "angular2/angular2";
+import {Component, View} from 'angular2/annotations';
+import {Inject} from "angular2/di";
+import {ElementRef} from 'angular2/src/core/compiler/element_ref';
 import {Post} from "wp-blog/Post";
 
 @Component({
