@@ -17,10 +17,6 @@
   },
   "homepage": "https://github.com/joachimprinzbach/blubb",
   "dependencies": {
-    "angular2": "^2.0.0-alpha.21",
-    "es6-module-loader": "^0.16.6",
-    "systemjs": "^0.16.11",
-    "traceur-runtime": "0.0.59"
   },
   "devDependencies": {
     "grunt": "^0.4.5",

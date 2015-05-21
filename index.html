@@ -17,16 +17,11 @@
     <!-- build:css css/all.min.css -->
     <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="bower_components/fancybox/source/jquery.fancybox.css" rel="stylesheet" type="text/css"/>
     <!-- endbuild -->
     <link rel="stylesheet/less" type="text/css" href="css/styles.less" />
-    <!-- build:js js/vendor.all.min.js -->
-    <script src="js/traceur-runtime.js"></script>
-    <script src="js/es6-module-loader-sans-promises.js"></script>
-    <script src="js/system.js"></script>
-    <script src="js/angular2.dev.js"></script>
-    <!-- endbuild -->
 </head>
-<body data-spy="scroll" data-target=".navbar">
+<body ng-app="blog" ng-controller="BlogEntry as vm" data-spy="scroll" data-target=".navbar">
 <nav class="navbar navbar-default navbar-fixed-top nav-close">
     <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
@@ -35,17 +30,15 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">nav brand</a>
+        <a class="navbar-brand" href="#">Webseite Blog Bilder</a>
     </div>
     <div class="collapse navbar-collapse navbar-right">
         <ul class="nav navbar-nav">
             <li class="active"><a href="#top"><i class="fa fa-home"></i><span>Home</span></a></li>
             <li><a href="#blog"><i class="fa fa-wordpress"></i><span>Blog</span></a></li>
-            <li><a href="#travel"><i class="fa fa-plane"></i><span>Reisen</span></a></li>
-            <li><a href="#photo"><i class="fa fa-camera"></i><span>Photo</span></a></li>
+            <li><a href="#photo"><i class="fa fa-camera"></i><span>Fotografie</span></a></li>
             <li><a href="#coding"><i class="fa fa-file-code-o"></i><span>Coding</span></a></li>
-            <li><a href="#web"><i class="fa fa-desktop"></i><span>Web</span></a></li>
-            <li><a href="#graduation"><i class="fa fa-graduation-cap"></i><span>Ausbildung</span></a></li>
+            <!--<li><a href="#graduation"><i class="fa fa-graduation-cap"></i><span>Ausbildung</span></a></li>-->
             <li><a href="#contact"><i class="fa fa-envelope"></i><span>Kontakt</span></a></li>
         </ul>
     </div>
@@ -54,48 +47,37 @@
     <h1 class="header-catcher" data-sr="enter bottom ease 100px reset">Joachim <i class="fa fa-twitter"></i><span> @Johaaachim</span>
     </h1>
 
-    <h1 class="page-description" data-sr="wait 0.3s">Das ist eine wunderschöne Überschrift. Beschreibt die Seite
-        grundlegend.</h1>
+    <h1 class="page-description" data-sr="wait 0.3s">Wasserschatz nervt. Klappe halten!</h1>
 </header>
-<section id="blog" class="page-content light-tone section-blog">
+<section id="blog" class="page-content dark-tone section-blog">
     <div class="container">
-        <h1><i class="fa fa-wordpress"></i><span>&lt;/ </span>Blog<span> &gt;</span></h1>
-        <script>
-            System.import('wp-blog/wpBlog');
-        </script>
-        <wp-blog></wp-blog>
-    </div>
-</section>
-<section id="travel" class="page-content dark-tone">
-    <div class="container">
-        <h1><i class="fa fa-plane"></i><span>&lt;/ </span>Reisen &amp; Berichte<span> &gt;</span></h1>
+        <h1><i class="fa fa-wordpress"></i><span>&lt;/ </span>Blog - Neuigkeiten &amp;  spannende Themen<span> &gt;</span></h1>
+        <div ng-repeat="post in vm.blogentries">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="row">
+                        <div class="map">
+                            <p>Tag: 1, Montag, den 30.03.2015</p>
+                            <p>{{post.modified_gmt}}</p>
+                            <p>{{post.post_meta.gmaps}}</p>
+                        </div>
+                    </div>
 
-        <p>test</p>
-
-        <p>test</p>
-
-        <p>test</p>
-
-        <p>test</p>
-
-        <p>test</p>
-
-        <p>test</p>
-
-        <p>test</p>
-
-        <p>test</p>
-
-        <p>test</p>
-
-        <p>test</p>
+                </div>
+                <div class="col-sm-8">
+                    <h2>{{post.title}}</h2>
+                    <p ng-bind-html="post.content | to_trusted"></p>
+                    <p>{{post.blubb}}</p>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 <section id="photo" class="page-content light-tone">
     <div class="container">
-        <h1><i class="fa fa-camera"></i><span>&lt;/ </span>Fotografie<span> &gt;</span></h1>
+        <h1><i class="fa fa-camera"></i><span>&lt;/ </span>Fotografie - die schöne Abwechslung<span> &gt;</span></h1>
 
-        <p>test</p>
+        <a class="fancybox" rel="group" href="img/kik.jpg"><img src="img/kik.jpg" alt="alt" title="Mein Titel"/></a>
 
         <p>test</p>
 
@@ -189,13 +171,7 @@
                     ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
             </div>
         </div>
-    </div>
-</section>
-<section id="web" class="page-content light-tone section-web">
-    <div class="container">
-        <h1><i class="fa fa-desktop"></i><span>&lt;/ </span>Web Development<span> &gt;</span></h1>
-
-        <div class="row">
+        <div class="row top-buffer">
             <div class="col-sm-4">
                 <i class="fa fa-5x fa-code"></i>
 
@@ -225,7 +201,7 @@
         </div>
     </div>
 </section>
-<section id="graduation" class="page-content dark-tone">
+<!--<section id="graduation" class="page-content light-tone">
     <div class="container">
         <h1><i class="fa fa-graduation-cap"></i><span>&lt;/ </span>Ausbildung &amp; Jobs<span> &gt;</span></h1>
 
@@ -249,13 +225,12 @@
 
         <p>test</p>
     </div>
-</section>
+</section> -->
 <footer id="contact" class="page-content accent-background bright-tone section-contact">
     <div class="container text-center">
-        <h1><i class="fa fa-envelope"></i><span>&lt;/ </span>Kontakt<span> &gt;</span></h1>
+        <h1><i class="fa fa-envelope"></i><span>&lt;/ </span>Kontakt - get in touch<span> &gt;</span></h1>
 
-        <p>Das Internet ist auch für mich Neuland xD <br/>Vernetzt euch gerne mit mir oder werft einen Blick auf die
-            anderen Plattformen.</p>
+        <p>Vernetzt euch gerne mit mir oder werft einen Blick auf die weiteren Plattformen auf denen ich aktiv bin.</p>
 
         <div>
             <a class="btn btn-main-inverse email-link" href="mailto:info@joachimprinzbach.de">
@@ -265,7 +240,7 @@
 
         <div class="row footer-margin">
             <div class="col-md-6">
-                <p class="built">&copy; Built with lots of <span class="fa fa-heart"></span> on a <span
+                <p class="built"><span class="fa fa-code"></span> with lots of <span class="fa fa-heart"></span> on a <span
                         class="fa fa-apple"></span> - by Joachim Prinzbach 2015</p>
             </div>
             <div class="col-md-2"></div>
@@ -297,13 +272,34 @@
     </div>
 </footer>
 <!-- build:js js/all.min.js -->
+<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+<script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script type="text/javascript" src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="bower_components/angular-base64/angular-base64.js"></script>
 <script src="bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="bower_components/fancybox/source/jquery.fancybox.pack.js" type="text/javascript"></script>
 <script src="js/script.js" type="text/javascript"></script>
 <script src="bower_components/scroll-reveal/dist/scrollReveal.min.js" type="text/javascript"></script>
 <script src="bower_components/less/dist/less.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="js/filters/toTrusted.js"></script>
+<script type="text/javascript" src="js/controllers/BlogEntry.js"></script>
+<script type="text/javascript" src="js/services/blog.js"></script>
 <!-- endbuild -->
-<script>
+<script type="text/javascript">
+            $(document).ready(function() {
+                $(".fancybox").fancybox({
+                    openEffect	: 'elastic',
+                    closeEffect	: 'elastic',
+
+                    helpers : {
+                        title : {
+                            type : 'inside'
+                        }
+                    }
+                });
+            });
     function reveal() {
         var config = {
             reset  : false,

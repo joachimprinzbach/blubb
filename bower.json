@@ -16,6 +16,13 @@
     "foundation": "~5.5.2",
     "bootstrap": "~3.3.4",
     "scroll-reveal": "~2.3.0",
-    "less": "~2.5.0"
+    "less": "~2.5.0",
+    "angular-base64": "~2.0.4",
+    "fancybox": "~2.1.5"
+  },
+  "devDependencies": {
+    "angular": "~1.3.15",
+    "angular-bootstrap": "~0.13.0",
+    "angular-resource": "~1.3.15"
   }
 }

@@ -1,14 +1,14 @@
 $('body').scrollspy({
 	target: '.navbar',
-	offset: 71
+	offset: 75
 });
 
-$('.nav a').on('click', function(){
+$('.nav a').on('click', function () {
 	$(".navbar-toggle").click();
 });
 
 $(document).on('scroll', function () {
-	if ($(document).scrollTop() > 40) {
+	if ($(document).scrollTop() > 5) {
 		$('.navbar').addClass('nav-open').removeClass('nav-close');
 	} else {
 		$('.navbar').removeClass('nav-open').addClass('nav-close');
