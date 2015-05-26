@@ -18,7 +18,8 @@
     "scroll-reveal": "~2.3.0",
     "less": "~2.5.0",
     "angular-base64": "~2.0.4",
-    "fancybox": "~2.1.5"
+    "fancybox": "~2.1.5",
+    "parallax.js": "~1.3.2"
   },
   "devDependencies": {
     "angular": "~1.3.15",
