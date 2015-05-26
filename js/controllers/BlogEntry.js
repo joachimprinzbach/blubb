@@ -14,6 +14,7 @@
 
 		blog.getBlog().then(function (results) {
 			vm.blogentries = results;
+			vm.showspinner = 'show';
 		}, function (error) {
 			console.log(error);
 		});

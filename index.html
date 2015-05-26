@@ -11,7 +11,7 @@
     <meta name="author" content="Joachim Prinzbach">
 
     <link rel="shortcut icon" href="img/favicon.png"/>
-    <title>Joachim - in the web</title>
+    <title>Joachim und &amp; Lena in USA</title>
     <link href='http://fonts.googleapis.com/css?family=Raleway:200,400,500|Pacifico|Lato:400' rel='stylesheet'
           type='text/css'>
     <!-- build:css css/all.min.css -->
@@ -44,14 +44,15 @@
     </div>
 </nav>
 <header id="top" class="site-header accent-background">
-    <h1 class="header-catcher" data-sr="enter bottom ease 100px reset">Joachim <i class="fa fa-twitter"></i><span> @Johaaachim</span>
+    <h1 class="header-catcher" data-sr="enter bottom ease 100px reset">Joachim &amp; Lena <i class="fa fa-plane"></i><span>@ USA</span>
     </h1>
 
-    <h1 class="page-description" data-sr="wait 0.3s">Wasserschatz nervt. Klappe halten!</h1>
+    <h1 class="page-description" data-sr="wait 0.3s">6 Wochen Süd-West-USA im Wohnmobil</h1>
 </header>
 <section id="blog" class="page-content dark-tone section-blog">
     <div class="container">
-        <h1><i class="fa fa-wordpress"></i><span>&lt;/ </span>Blog - Neuigkeiten &amp;  spannende Themen<span> &gt;</span></h1>
+        <h1><i class="fa fa-wordpress"></i><span>&lt;/ </span>Blog - Impressionen &amp;  aktuelle Informationen<span> &gt;</span></h1>
+        <div ng-show="!vm.showspinner" id="spinner" col-sm-12><span class="fa fa-5x fa-spin fa-spinner"></span></p></div>
         <div ng-repeat="post in vm.blogentries">
             <div class="row">
                 <div class="col-sm-4">

@@ -1,0 +1,69 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'update', '-g', 'bower' ]
+2 info using npm@2.5.1
+3 info using node@v0.12.0
+4 verbose node symlink /usr/local/bin/node
+5 silly mapToRegistry name bower
+6 silly mapToRegistry using default registry
+7 silly mapToRegistry registry https://registry.npmjs.org/
+8 silly mapToRegistry uri https://registry.npmjs.org/bower
+9 verbose request uri https://registry.npmjs.org/bower
+10 verbose request no auth needed
+11 info attempt registry request try #1 at 14:11:22
+12 verbose request id e9db2aade075f18d
+13 verbose etag "7R9FZWXTT6ODL83S51HDX9FJ7"
+14 http request GET https://registry.npmjs.org/bower
+15 http 200 https://registry.npmjs.org/bower
+16 silly get cb [ 200,
+16 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+16 silly get     etag: '"AJZG3F9BBUBU91J9Y6TINU9II"',
+16 silly get     'content-type': 'application/json',
+16 silly get     'cache-control': 'max-age=60',
+16 silly get     'content-length': '112033',
+16 silly get     'accept-ranges': 'bytes',
+16 silly get     date: 'Fri, 15 May 2015 12:11:23 GMT',
+16 silly get     via: '1.1 varnish',
+16 silly get     age: '53',
+16 silly get     connection: 'keep-alive',
+16 silly get     'x-served-by': 'cache-fra1248-FRA',
+16 silly get     'x-cache': 'HIT',
+16 silly get     'x-cache-hits': '2',
+16 silly get     'x-timer': 'S1431691883.273754,VS0,VE0',
+16 silly get     vary: 'Accept' } ]
+17 verbose get saving bower to /Users/Joachim/.npm/registry.npmjs.org/bower/.cache.json
+18 silly mapToRegistry name bower
+19 silly mapToRegistry using default registry
+20 silly mapToRegistry registry https://registry.npmjs.org/
+21 silly mapToRegistry uri https://registry.npmjs.org/bower
+22 verbose get https://registry.npmjs.org/bower not expired, no request
+23 info outdated updating [ [ '/usr/local/lib', 'bower', '1.3.12', '1.4.1', '1.4.1', 'latest' ],
+23 info outdated   [ '/usr/local/lib/node_modules/meanio/node_modules/mean-cli',
+23 info outdated     'bower',
+23 info outdated     '1.3.12',
+23 info outdated     '1.4.1',
+23 info outdated     '1.4.1',
+23 info outdated     '^1.3.8' ] ]
+24 verbose stack Error: Failed to parse json
+24 verbose stack Unexpected end of input
+24 verbose stack     at parseError (/usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:378:25)
+24 verbose stack     at parseJson (/usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:85:51)
+24 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:59:33
+24 verbose stack     at evalmachine.<anonymous>:336:14
+24 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js:102:5
+24 verbose stack     at FSReqWrap.oncomplete (evalmachine.<anonymous>:99:15)
+25 verbose cwd /Users/Joachim/Projects/website-private
+26 error Darwin 14.3.0
+27 error argv "node" "/usr/local/bin/npm" "update" "-g" "bower"
+28 error node v0.12.0
+29 error npm  v2.5.1
+30 error file /usr/local/lib/node_modules/generator-meanjs/node_modules/yeoman-generator/node_modules/file-utils/node_modules/minimatch/node_modules/sigmund/package.json
+31 error code EJSONPARSE
+32 error Failed to parse json
+32 error Unexpected end of input
+33 error File: /usr/local/lib/node_modules/generator-meanjs/node_modules/yeoman-generator/node_modules/file-utils/node_modules/minimatch/node_modules/sigmund/package.json
+34 error Failed to parse package.json data.
+34 error package.json must be actual JSON, not just JavaScript.
+34 error
+34 error This is not a bug in npm.
+34 error Tell the package author to fix their package.json file. JSON.parse
+35 verbose exit [ 1, true ]
