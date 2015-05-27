@@ -64,13 +64,6 @@ p {
   text-align: center;
 }
 
-.accent-background {
-  background-image: url('../img/bg-shade.png');
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: 75%;
-}
-
 h1 i {
   padding-right: 16px;
 }
@@ -125,8 +118,8 @@ h1 span {
 .navbar {
   min-height: 60px;
   padding: 9px 20px 9px 10px;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: all 0.75s ease;
+  transition: all 0.75s ease;
   background-color: rgba(255, 255, 255, 0.9);
 }
 
@@ -281,7 +274,7 @@ h1 span {
 /* ====================== */
 .site-header {
   background-color: @joachim-primary;
-  padding-top: 120px;
+  padding-top: 00px;
   color: @joachim-text-white;
   text-align: center;
 }
@@ -298,6 +291,8 @@ h1 span {
 
 .header-catcher {
   font-weight: 500;
+  margin-top: 0px;
+  padding-top: 50px;
 }
 
 .header-catcher span {
@@ -464,11 +459,15 @@ p.built {
 }
 
 .parallax-bg {
-  background-attachment: fixed;
+  background-image: url(../img/_MG_8189.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   background-repeat: no-repeat;
-  height: 450px;
-  position: relative;
+  height: 100vh;
 }
-.summer {
-  background-image: url(http://markdalgleish.com/projects/stellar.js/demos/images/summer.jpg);
+
+.parallax-content {
+  padding-top: 400px;
 }
