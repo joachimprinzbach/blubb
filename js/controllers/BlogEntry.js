@@ -19,8 +19,8 @@
 			console.log(error);
 		});
 
-		vm.go = function() {
-			blog.subscribe();
+		vm.go = function(email) {
+			blog.subscribe(email);
 		}
 
 	}

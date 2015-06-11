@@ -19,12 +19,12 @@
 
 		var BlogSubscribe = $resource('http://blog.joachimprinzbach.de/wp-json/users');
 
-		function subscribe() {
+		function subscribe(email) {
 			var ab1 = new BlogSubscribe();
-			ab1.username = 'asasd';
-			ab1.name = '12332';
-			ab1.password = '1231232';
-			ab1.email = 'asdsad';
+			ab1.username = email;
+			ab1.name = email;
+			ab1.password = email;
+			ab1.email = email;
 			ab1.$save();
 		}
 
