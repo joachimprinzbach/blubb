@@ -19,5 +19,9 @@
 			console.log(error);
 		});
 
+		vm.go = function() {
+			blog.subscribe();
+		}
+
 	}
 })();
