@@ -11,7 +11,7 @@
     <meta name="author" content="Joachim Prinzbach">
 
     <link rel="shortcut icon" href="img/favicon.png"/>
-    <title>Joachim und &amp; Lena in den USA</title>
+    <title>Joachim &amp; Lena in den USA</title>
     <link href='http://fonts.googleapis.com/css?family=Raleway:200,400,500|Pacifico|Lato:400' rel='stylesheet'
           type='text/css'>
     <!-- build:css css/all.min.css -->
@@ -58,7 +58,9 @@
 <section id="usa-info" class="page-content light-tone">
     <div class="container">
         <h1><i class="fa fa-bus"></i><span>&lt;/ </span>40 Tage durch den Südwesten der USA<span> &gt;</span></h1>
-        <a ng-href='#here' ng-click='vm.go("joachim.prinzbach@zuehlke.com")' >click me</a>
+        <input type="email" name="input" ng-model="vm.email" required>
+
+        <a ng-href='#here' ng-click='vm.go(vm.email)' >click me</a>
         <h2>Route</h2>
         <iframe src="https://www.google.com/maps/d/embed?mid=zeg17gwtSFqU.kSpvQmDszpX8" width="800" height="600"
                 frameborder="0" style="border:0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
@@ -87,11 +89,9 @@
 
                 </div>
                 <div class="col-sm-8">
-                    <h2>{{post.title}}</h2>
+                    <h2 ng-bind-html="post.title | to_trusted"></h2>
 
                     <p ng-bind-html="post.content | to_trusted"></p>
-
-                    <p>{{post.blubb}}</p>
                 </div>
             </div>
         </div>
@@ -124,26 +124,8 @@
 </section>
 <section id="coding" class="page-content dark-tone section-web">
     <div class="container">
-        <h1><i class="fa fa-file-code-o"></i><span>&lt;/ </span>Coding - Profession &amp; Passion<span> &gt;</span></h1>
+        <h1><i class="fa fa-file-code-o"></i><span>&lt;/ </span>Coding - Website under the hood<span> &gt;</span></h1>
 
-        <div class="row">
-            <div class="col-sm-6">
-                <i class="fa fa-5x fa-desktop"></i>
-
-                <h2>JavaFX Fat Clients</h2>
-
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-                    ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-            </div>
-            <div class="col-sm-6">
-                <i class="fa fa-5x fa-code"></i>
-
-                <h2>Java</h2>
-
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-                    ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-            </div>
-        </div>
         <div class="row top-buffer">
             <div class="col-sm-4">
                 <i class="fa fa-5x fa-briefcase"></i>
@@ -156,44 +138,18 @@
             <div class="col-sm-4">
                 <i class="fa fa-5x fa-code-fork"></i>
 
-                <h2>Source Control - Git, Svn, Cvs &amp; Co.</h2>
+                <h2>Source Control - Git</h2>
 
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-                    ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                <p>Der Code ist auf GitHub frei verfügbar</p>
             </div>
             <div class="col-sm-4">
                 <i class="fa fa-5x fa-database"></i>
 
-                <h2>Datenbanken</h2>
+                <h2>Backend</h2>
 
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-                    ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-            </div>
-        </div>
-        <div class="row top-buffer">
-            <div class="col-sm-4">
-                <i class="fa fa-5x fa-print"></i>
-
-                <h2>Verträge mit JasperReports</h2>
-
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-                    ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-            </div>
-            <div class="col-sm-4">
-                <i class="fa fa-5x fa-user"></i>
-
-                <h2>Interaktion mit Benutzern und Stakeholdern</h2>
-
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-                    ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-            </div>
-            <div class="col-sm-4">
-                <i class="fa fa-5x fa-users"></i>
-
-                <h2>Agile Entwicklung im Team mit Scrum</h2>
-
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-                    ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                <p>Das Backend ist Wordpress und läuft unter der Subdomain blog.joachimprinzbach.de.
+                    Der Zugriff erfolgt dann per REST-Services, somit kann das Backend jederzeit durch eine Eigenentwicklung ausgetauscht werden.
+                    Dafür hatte leider die Zeit vor dem Abflug nicht mehr gereicht - man muss aber das Rad auch nicht immer neu erfinden.</p>
             </div>
         </div>
         <div class="row top-buffer">

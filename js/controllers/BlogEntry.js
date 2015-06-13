@@ -11,6 +11,7 @@
 		var vm = this;
 
 		vm.blogentries = [];
+		vm.email = '';
 
 		blog.getBlog().then(function (results) {
 			vm.blogentries = results;
@@ -19,8 +20,8 @@
 			console.log(error);
 		});
 
-		vm.go = function(email) {
-			blog.subscribe(email);
+		vm.go = function() {
+			blog.subscribe(vm.email);
 		}
 
 	}
