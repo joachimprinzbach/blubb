@@ -78,5 +78,5 @@ module.exports = function (grunt) {
 
     grunt.registerTask('build', ['clean:build', 'copy:dist', 'copy:img','copy:fonts', 'copy:app', 'useminPrepare', 'concat', 'uglify', 'cssmin', 'usemin', 'less:dist','clean:temp']);
     grunt.registerTask('default', ['build']);
-    grunt.registerTask('less', ['less:dev']);
+    grunt.registerTask('less', ['less:dist']);
 };

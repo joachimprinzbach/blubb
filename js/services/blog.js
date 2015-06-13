@@ -6,7 +6,7 @@
 
 	function blog($resource) {
 
-		var BlogPosts = $resource('http://blog.joachimprinzbach.de/wp-json/posts?filter[orderby]=date&filter[posts_per_page]=3');
+		var BlogPosts = $resource('http://blog.joachimprinzbach.de/wp-json/posts?filter[orderby]=date&filter[posts_per_page]=8');
 
 		function getBlog() {
 			return BlogPosts.query().$promise.then(
