@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/joachimprinzbach/blubb",
   "dependencies": {
+    "express": "^4.12.4"
   },
   "devDependencies": {
     "grunt": "^0.4.5",

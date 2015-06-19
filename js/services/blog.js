@@ -17,9 +17,8 @@
 
 		return service;
 
-		var BlogPosts = $resource('http://blog.joachimprinzbach.de/wp-json/posts?filter[orderby]=date&filter[posts_per_page]=8');
-
 		function getBlog() {
+			var BlogPosts = $resource('http://blog.joachimprinzbach.de/wp-json/posts?filter[orderby]=date&filter[posts_per_page]=8');
 			return BlogPosts.query().$promise.then(
 				function (results) {
 					return results;
@@ -28,9 +27,9 @@
 			});
 		}
 
-		var BlogSubscribe = $resource('http://blog.joachimprinzbach.de/wp-json/users');
 
 		function subscribe(email) {
+			var BlogSubscribe = $resource('http://blog.joachimprinzbach.de/wp-json/users');
 			var ab1 = new BlogSubscribe();
 			ab1.username = email;
 			ab1.name = email;
