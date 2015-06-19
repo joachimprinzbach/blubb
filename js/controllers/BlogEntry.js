@@ -4,10 +4,13 @@
 
 	angular
 		.module('blog')
-		.controller('BlogEntry', BlogEntry);
 
+		.controller('BlogEntry', BlogEntry)
+
+		.$inject = ['blog'];
+
+    /* @ngInject */
 	function BlogEntry(blog) {
-
 		var vm = this;
 
 		vm.blogentries = [];

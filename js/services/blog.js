@@ -2,9 +2,20 @@
 	'use strict';
 	angular
 		.module('blog')
-		.factory('blog', blog);
 
+		.factory('blog', blog)
+
+		.$inject = ['$resource'];
+
+	/* @ngInject */
 	function blog($resource) {
+
+		var service = {
+			getBlog: getBlog,
+			subscribe: subscribe
+		};
+
+		return service;
 
 		var BlogPosts = $resource('http://blog.joachimprinzbach.de/wp-json/posts?filter[orderby]=date&filter[posts_per_page]=8');
 
@@ -26,11 +37,6 @@
 			ab1.password = email;
 			ab1.email = email;
 			ab1.$save();
-		}
-
-		return {
-			getBlog: getBlog,
-			subscribe: subscribe
 		}
 
 	}
