@@ -1,2 +1,2 @@
-# Personal websote
+# Personal website
 www.joachimprinzbach.de
