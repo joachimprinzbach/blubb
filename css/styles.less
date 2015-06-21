@@ -10,7 +10,6 @@
 //@joachim-bg-section-dark: #555;
 //@joachim-section-header-dark: #999;
 
-
 @joachim-primary: #6fae7f;
 @joachim-secondary: #de4957;
 @joachim-bg-section-light: #F5F2ED;
@@ -18,10 +17,6 @@
 @joachim-text-main: #666;
 @joachim-text-white: #fff;
 @joachim-text-black: #000;
-
-
-
-
 
 /* ====================== */
 /* GENERAL */
@@ -201,6 +196,20 @@ h1 span {
   }
 }
 
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+  .site-header {
+    padding-top: 50px;
+  }
+
+  .site-header .page-description {
+    font-size: 25px;
+    width: 90%;
+    padding: 40px 0 50px;
+  }
+}
+
+/* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
   .page-content h1 {
     margin: 70px 0;
@@ -264,9 +273,31 @@ h1 span {
   }
 }
 
-/* Custom, iPhone Retina */
-@media only screen and (max-width: 320px) {
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
 
+  .site-header .page-description {
+    font-size: 20px;
+    line-height: 1.8;
+  }
+
+  .page-content h1 {
+    font-size: 20px;
+    margin: 60px 0;
+  }
+
+  h2, .h2 {
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  p {
+    line-height: 1.8;
+  }
+
+  .page-content {
+    padding-bottom: 80px;
+  }
 }
 
 /* ====================== */
@@ -280,7 +311,7 @@ h1 span {
 }
 
 .site-header .header-catcher {
-  font-size: 38px;
+  font-size: 28px;
   font-weight: 400;
 }
 
@@ -385,7 +416,6 @@ h1 span {
 .section-blog {
 }
 
-
 /* ====================== */
 /** CONTACT and FOOTER section */
 /* ====================== */
@@ -471,3 +501,4 @@ p.built {
 .parallax-content {
   padding-top: 20VH;
 }
+
