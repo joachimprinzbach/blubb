@@ -45,22 +45,22 @@
 <header id="top" class="site-header accent-background">
     <div class="parallax-bg  container-fluid" data-stellar-background-ratio="0.1">
         <div class="parallax-content">
-            <h1 class="header-catcher">Joachim &amp; Lena <i class="fa fa-plane"></i><span>@ USA</span></h1>
+            <h1 class="header-catcher">Joachim &amp; Lena @ USA</span></h1>
 
             <h1 class="page-description">6 Wochen Süd-West-USA im Wohnmobil</h1>
 
-            <h1><a href="#blog"><i class="fa fa-wordpress"></i> Zum Blog</a></h1>
+            <h1><a  class="white" href="#blog"><i class="fa fa-wordpress"></i> Direkt zum Blog</a></h1>
         </div>
     </div>
 </header>
 <section id="usa-info" class="page-content light-tone">
     <div class="container">
-        <h1><i class="fa fa-bus"></i><span>&lt;/ </span>40 Tage durch den Südwesten der USA<span> &gt;</span></h1>
+        <h1><i class="fa fa-bus"></i><span>&lt;/ </span>40 Tage Südwesten<span> &gt;</span></h1>
         <input type="email" name="input" ng-model="vm.email" required>
 
         <a ng-click='vm.go(vm.email)' >Subscribe</a>
         <h2>Route</h2>
-        <div id="gmap">
+        <div id="gmap" class="maps">
             <iframe style="pointer-events: none;" src="https://www.google.com/maps/d/embed?mid=zeg17gwtSFqU.kSpvQmDszpX8" width="800" height="600"
                     frameborder="0" style="border:0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
         </div>
@@ -68,7 +68,7 @@
 </section>
 <section id="blog" class="page-content dark-tone section-blog">
     <div class="container">
-        <h1><i class="fa fa-wordpress"></i><span>&lt;/ </span>Blog - Impressionen &amp; aktuelle Informationen<span> &gt;</span>
+        <h1><i class="fa fa-wordpress"></i><span>&lt;/ </span>Blog - Impressionen<span> &gt;</span>
         </h1>
 
         <div ng-show="!vm.showspinner" id="spinner" col-sm-12><span class="fa fa-5x fa-spin fa-spinner"></span></p>
@@ -95,7 +95,7 @@
 </section>
 <section id="photo" class="page-content light-tone">
     <div class="container">
-        <h1><i class="fa fa-camera"></i><span>&lt;/ </span>Fotografie - die schöne Abwechslung<span> &gt;</span></h1>
+        <h1><i class="fa fa-camera"></i><span>&lt;/ </span>Fotografie<span> &gt;</span></h1>
 
         <a class="fancybox" rel="group" href="img/kik.jpg"><img src="img/kik.jpg" alt="alt" title="Mein Titel"/></a>
 
@@ -120,7 +120,7 @@
 </section>
 <section id="coding" class="page-content dark-tone section-web">
     <div class="container">
-        <h1><i class="fa fa-file-code-o"></i><span>&lt;/ </span>Coding - Website under the hood<span> &gt;</span></h1>
+        <h1><i class="fa fa-file-code-o"></i><span>&lt;/ </span>Coding the Website<span> &gt;</span></h1>
 
         <div class="row top-buffer">
             <div class="col-sm-4">
@@ -174,8 +174,8 @@
                 <h2>Build &amp; Deployment</h2>
 
                 <p>Als Taskrunner fiel die Wahl auf Grunt.
-                    Damit werden in erster Linie sämtliche Build tasks ausgeführt (minify, uglify, compile less).
-                    Das Deployment erfolgt noch manuell.</p>
+                    Damit werden in erster Linie sämtliche Build tasks ausgeführt (minify, uglify, compile less etc.).
+                    Das Deployment erfolgt automatisch durch Heroku.</p>
             </div>
         </div>
     </div>
