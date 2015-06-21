@@ -77,16 +77,13 @@
         <div ng-repeat="post in vm.blogentries">
             <div class="row">
                 <div class="col-sm-4">
-                    <div class="row">
-                        <div class="map">
-                            <p>Tag: 1, Montag, den 30.03.2015</p>
+                    <div>
+                        <p>Tag: 1, Montag, den 30.03.2015</p>
 
-                            <p>{{post.modified_gmt}}</p>
+                        <p>{{post.modified_gmt}}</p>
 
-                            <p>{{post.post_meta.gmaps}}</p>
-                        </div>
+                        <p>{{post.post_meta.gmaps}}</p>
                     </div>
-
                 </div>
                 <div class="col-sm-8">
                     <h2 ng-bind-html="post.title | to_trusted"></h2>
