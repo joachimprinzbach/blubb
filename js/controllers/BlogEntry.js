@@ -15,13 +15,24 @@
 
 		vm.blogentries = [];
 		vm.email = '';
+		vm.page = 1;
 
-		blog.getBlog().then(function (results) {
+		blog.getBlog(vm.page).then(function (results) {
 			vm.blogentries = results;
 			vm.showspinner = 'show';
 		}, function (error) {
 			console.log(error);
 		});
+
+		vm.loadMoreResults = function () {
+			vm.page++;
+			blog.getBlog(vm.page).then(function (results) {
+				angular.extend(vm.blogentries, results);
+			}, function (error) {
+				console.log(error);
+			});
+
+		};
 
 		vm.go = function() {
 			blog.subscribe(vm.email);

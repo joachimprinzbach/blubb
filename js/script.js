@@ -74,8 +74,6 @@ $(document).ready(function () {
 
         var val = $(this).css('background-image').replace(/url\(/g,'').replace(/\)/,'').replace(/"/g,'');
         var imgVal = $(this).not('script, iframe').attr('src');
-        console.log(val);
-        console.log(imgVal);
         if(val !== 'none' && !/linear-gradient/g.test(val) && bgImg.indexOf(val) === -1){
             bgImg.push(val)
         }
