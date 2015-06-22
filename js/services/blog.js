@@ -17,8 +17,8 @@
 
 		return service;
 
-		function getBlog() {
-			var BlogPosts = $resource('http://blog.joachimprinzbach.de/wp-json/posts?filter[orderby]=date&filter[posts_per_page]=8');
+		function getBlog(page) {
+			var BlogPosts = $resource('http://blog.joachimprinzbach.de/wp-json/posts?filter[orderby]=date&filter[posts_per_page]=3&page='+page);
 			return BlogPosts.query().$promise.then(
 				function (results) {
 					return results;
