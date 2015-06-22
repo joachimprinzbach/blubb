@@ -27,7 +27,7 @@
 		vm.loadMoreResults = function () {
 			vm.page++;
 			blog.getBlog(vm.page).then(function (results) {
-				angular.extend(vm.blogentries, results);
+				vm.blogentries = vm.blogentries.concat(results);
 			}, function (error) {
 				console.log(error);
 			});
