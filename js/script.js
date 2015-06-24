@@ -153,7 +153,7 @@ $(document).ready(function () {
 function reveal() {
     var config = {
         reset: false,
-        mobile: false,
+        mobile: true,
         scale: {direction: 'up', power: '0%'},
         move: '0px',
         vFactor: 0.40
