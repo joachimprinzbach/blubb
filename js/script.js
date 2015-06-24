@@ -120,16 +120,6 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-    $(".fancybox").fancybox({
-        openEffect: 'elastic',
-        closeEffect: 'elastic',
-
-        helpers: {
-            title: {
-                type: 'inside'
-            }
-        }
-    });
     $.stellar({
         horizontalScrolling: false,
         responsive: true
