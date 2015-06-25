@@ -19,7 +19,6 @@
 
 		blog.getBlog(vm.page).then(function (results) {
 			vm.blogentries = results;
-			window.loading_screen.finish();
 			vm.showspinner = 'show';
 		}, function (error) {
 			console.log(error);
