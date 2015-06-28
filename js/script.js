@@ -119,6 +119,10 @@ $(document).ready(function () {
 
 });
 
+$(function () {
+	$('#photo a').fluidbox();
+});
+
 function reveal() {
 	var config = {
 		reset: false,
