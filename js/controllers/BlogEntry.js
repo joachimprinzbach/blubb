@@ -5,11 +5,10 @@
 	angular
 		.module('blog')
 
-		.controller('BlogEntry', BlogEntry)
+		.controller('BlogEntry', BlogEntry);
 
-		.$inject = ['blog'];
-
-    /* @ngInject */
+	BlogEntry.$inject = ['blog'];
+	/* @ngInject */
 	function BlogEntry(blog) {
 		var vm = this;
 

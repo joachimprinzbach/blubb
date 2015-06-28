@@ -3,10 +3,10 @@
 	angular
 		.module('blog')
 
-		.factory('blog', blog)
+		.factory('blog', blog),
 
-		.$inject = ['$resource'];
 
+		blog.$inject = ['$resource'];
 	/* @ngInject */
 	function blog($resource) {
 
