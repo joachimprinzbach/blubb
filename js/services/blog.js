@@ -35,7 +35,7 @@
 			ab1.name = email;
 			ab1.password = email;
 			ab1.email = email;
-			ab1.$save();
+			return ab1.$save();
 		}
 
 	}

@@ -55,16 +55,21 @@
 <section id="usa-info" class="page-content light-tone">
     <div class="container">
         <h1 data-sr="enter bottom ease 100px"><i class="fa fa-bus"></i><span>&lt;/ </span>40 Tage Südwesten<span> &gt;</span></h1>
-        <div class="row">
-            <p>Einfach die E-Mail Adresse angeben und auf abonieren klicken. Schon wird man immer bei Neuigkeiten informiert.</p>
+        <div ng-hide="vm.subscribed">
+            <div class="row">
+                <p>Einfach die E-Mail Adresse angeben und auf abonnieren klicken. Schon wird man immer bei Neuigkeiten informiert.</p>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <input type="email" class="form-control" placeholder="email@mail.com" name="input" ng-model="vm.email" required>
+                </div>
+                <div class="col-md-2">
+                    <button class="btn btn-primary" type="button" ng-click='vm.go(vm.email)' >Abonnieren</button>
+                </div>
+            </div>
         </div>
-        <div class="row">
-            <div class="col-md-3">
-                <input type="email" class="form-control" placeholder="email@mail.com" name="input" ng-model="vm.email" required>
-            </div>
-            <div class="col-md-2">
-                <button class="btn btn-primary" type="button" ng-click='vm.go(vm.email)' >Abonieren</button>
-            </div>
+        <div class="row" id="subscriptionStatus">
+            <p>{{vm.subscribeStatus}}</p>
         </div>
         <div class="row">
             <h2>Route</h2>
@@ -239,6 +244,7 @@
 <script type="text/javascript" src="bower_components/angular/angular.js"></script>
 <script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
 <script type="text/javascript" src="bower_components/angular-resource/angular-resource.js"></script>
+<script type="text/javascript" src="bower_components/angular-local-storage/dist/angular-local-storage.min.js"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="js/script.js" type="text/javascript"></script>
 <script src="bower_components/angular-base64/angular-base64.js"></script>

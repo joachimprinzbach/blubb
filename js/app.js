@@ -6,7 +6,8 @@
 		.module('blog', [
 			'ngResource',
 			'ui.bootstrap',
-			'blogFilters'
+			'blogFilters',
+			'LocalStorageModule'
 		]);
 
 })();
