@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="USA 2015">
@@ -12,7 +12,9 @@
 
     <link rel="shortcut icon" href="img/favicon.png"/>
     <title>Joachim &amp; Lena in den USA</title>
-    <style> [data-sr] { visibility: hidden; } </style>
+    <style> [data-sr] {
+        visibility: hidden;
+    } </style>
     <link href='http://fonts.googleapis.com/css?family=Raleway:200,400,500|Pacifico|Lato:400' rel='stylesheet'
           type='text/css'>
     <!-- build:css css/all.min.css -->
@@ -49,9 +51,11 @@
 <header id="top" class="site-header accent-background">
     <div class="parallax-bg  container-fluid" data-stellar-background-ratio="0.1">
         <div class="parallax-content">
-            <h1 class="header-catcher" data-sr="wait 0.2s then enter bottom ease 100px">Joachim &amp; Lena @ USA</span></h1>
+            <h1 class="header-catcher" data-sr="wait 0.2s then enter bottom ease 100px">Joachim &amp; Lena @
+                USA</span></h1>
 
-            <h1 class="page-description" data-sr="wait 1.0s then enter left ease-out 50px over 1.4s">6 Wochen Süd-West-USA mit dem Wohnmobil</h1>
+            <h1 class="page-description" data-sr="wait 1.0s then enter left ease-out 50px over 1.4s">6 Wochen
+                Süd-West-USA mit dem Wohnmobil</h1>
 
             <h1><a class="white" href="#blog"><i class="fa fa-sign-in"></i> Zum Blog</a></h1>
         </div>
@@ -59,17 +63,21 @@
 </header>
 <section id="usa-info" class="page-content light-tone">
     <div class="container">
-        <h1 data-sr="enter bottom ease 100px"><i class="fa fa-bus"></i><span>&lt;/ </span>40 Tage Südwesten<span> &gt;</span></h1>
+        <h1 data-sr="enter bottom ease 100px"><i class="fa fa-bus"></i><span>&lt;/ </span>40 Tage
+            Südwesten<span> &gt;</span></h1>
+
         <div ng-hide="vm.subscribed">
             <div class="row">
-                <p>Einfach die E-Mail Adresse angeben und auf abonnieren klicken. Schon wird man immer bei Neuigkeiten informiert.</p>
+                <p>Einfach die E-Mail Adresse angeben und auf abonnieren klicken. Schon wird man immer bei Neuigkeiten
+                    informiert.</p>
             </div>
             <div class="row">
                 <div class="col-md-3">
-                    <input type="email" class="form-control" placeholder="email@mail.com" name="input" ng-model="vm.email" required>
+                    <input type="email" class="form-control" placeholder="email@mail.com" name="input"
+                           ng-model="vm.email" required>
                 </div>
                 <div class="col-md-2">
-                    <button class="btn btn-primary" type="button" ng-click='vm.go(vm.email)' >Abonnieren</button>
+                    <button class="btn btn-primary" type="button" ng-click='vm.go(vm.email)'>Abonnieren</button>
                 </div>
             </div>
         </div>
@@ -78,15 +86,24 @@
         </div>
         <div class="row">
             <h2>Route</h2>
-            <div class="col-md-6">
-                <img class="img-responsive" src="img/routeMap.png" />
+
+            <div class="row">
+                <p>Las Vegas - Yosemite NP - San Francisco - Los Angeles - San Diego - Gran Canyon NP - Page - Monument
+                Valley - Moab Zion NP - Bryce NP - Las Vegas</p>
             </div>
-            <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-6">
+                    <img class="img-responsive" src="img/routeMap.png"/>
+                </div>
+                <div class="col-md-6">
+
+                </div>
 
             </div>
         </div>
         <div class="row">
             <h2>Wohnmobil</h2>
+
             <div class="col-md-6">
                 <img class="img-responsive" src="img/c25.png"/>
             </div>
@@ -98,7 +115,8 @@
 </section>
 <section id="blog" class="page-content dark-tone section-blog">
     <div class="container">
-        <h1 data-sr="enter bottom ease 100px"><i class="fa fa-wordpress"></i><span>&lt;/ </span>Blog - News & Bilder<span> &gt;</span>
+        <h1 data-sr="enter bottom ease 100px"><i class="fa fa-wordpress"></i><span>&lt;/ </span>Blog - News &
+            Bilder<span> &gt;</span>
         </h1>
 
         <div ng-show="!vm.showspinner" id="spinner" col-sm-12>
@@ -122,12 +140,16 @@
                 </div>
             </div>
         </div>
-        <button data-sr="scale up 80%" type="button" class="btn btn-default" ng-click="vm.loadMoreResults()">Mehr Posts</button>
+        <button data-sr="scale up 80%" type="button" class="btn btn-default" ng-click="vm.loadMoreResults()">Mehr
+            Posts
+        </button>
     </div>
 </section>
 <section id="photo" class="page-content light-tone">
     <div class="container">
-        <h1 data-sr="enter bottom ease 100px"><i class="fa fa-camera"></i><span>&lt;/ </span>Fotografie<span> &gt;</span></h1>
+        <h1 data-sr="enter bottom ease 100px"><i
+                class="fa fa-camera"></i><span>&lt;/ </span>Fotografie<span> &gt;</span></h1>
+
         <div class="row">
             <p>Bilder kommen von Tag zu Tag ;-)</p>
             <!--<div class="col-sm-4">
@@ -167,7 +189,8 @@
 </section>
 <section id="coding" class="page-content dark-tone section-web">
     <div class="container">
-        <h1 data-sr="enter bottom ease 100px"><i class="fa fa-file-code-o"></i><span>&lt;/ </span>Coding the Website<span> &gt;</span></h1>
+        <h1 data-sr="enter bottom ease 100px"><i class="fa fa-file-code-o"></i><span>&lt;/ </span>Coding the
+            Website<span> &gt;</span></h1>
 
         <div class="row top-buffer">
             <div class="col-sm-6">
@@ -175,7 +198,8 @@
 
                 <h2>Eingesetzte Frameworks</h2>
 
-                <p>Für das Grid wird Twitter bootstrap (http://getbootstrap.com/) genutzt, für die Icons FontAwesome (http://fortawesome.github.io/Font-Awesome/).
+                <p>Für das Grid wird Twitter bootstrap (http://getbootstrap.com/) genutzt, für die Icons FontAwesome
+                    (http://fortawesome.github.io/Font-Awesome/).
                     Zugriff auf das Backend und Logik mit AngularJS (https://angularjs.org/). Für Scrolleffekte
                 </p>
             </div>
@@ -185,8 +209,10 @@
                 <h2>Backend</h2>
 
                 <p>Das Backend ist Wordpress und läuft unter der Subdomain blog.joachimprinzbach.de.
-                    Der Zugriff erfolgt dann per REST-Services, somit kann das Backend jederzeit durch eine Eigenentwicklung ausgetauscht werden.
-                    Dafür hatte leider die Zeit vor dem Abflug nicht mehr gereicht - man muss aber das Rad auch nicht immer neu erfinden.</p>
+                    Der Zugriff erfolgt dann per REST-Services, somit kann das Backend jederzeit durch eine
+                    Eigenentwicklung ausgetauscht werden.
+                    Dafür hatte leider die Zeit vor dem Abflug nicht mehr gereicht - man muss aber das Rad auch nicht
+                    immer neu erfinden.</p>
             </div>
         </div>
         <div class="row top-buffer">
@@ -198,14 +224,16 @@
                 <h2>Responsive Design</h2>
 
                 <p>Ein paar Elemente des reponsive Designs wurden ausprobiert.
-                    Mit media queries und dem mobile First sollte die Seite auch auf kleineren Mobile Devices einigermassen benutzbar sein ;-)</p>
+                    Mit media queries und dem mobile First sollte die Seite auch auf kleineren Mobile Devices
+                    einigermassen benutzbar sein ;-)</p>
             </div>
             <div class="col-sm-4">
                 <i class="fa fa-5x fa-code-fork"></i>
 
                 <h2>Source Control - Git</h2>
 
-                <p>Der Code ist auf GitHub frei verfügbar unter https://github.com/joachimprinzbach/website-private. </p>
+                <p>Der Code ist auf GitHub frei verfügbar unter
+                    https://github.com/joachimprinzbach/website-private. </p>
             </div>
             <div class="col-sm-4">
                 <i class="fa fa-5x fa-ship"></i>
@@ -221,11 +249,13 @@
 </section>
 <footer id="contact" class="page-content accent-background bright-tone section-contact">
     <div class="container text-center">
-        <h1 data-sr="enter bottom ease 100px"><i class="fa fa-envelope"></i><span>&lt;/ </span>Kontakt - get in touch<span> &gt;</span></h1>
+        <h1 data-sr="enter bottom ease 100px"><i class="fa fa-envelope"></i><span>&lt;/ </span>Kontakt - get in
+            touch<span> &gt;</span></h1>
 
         <div class="row">
             <div class="col-md-12">
-                <p>Vernetzt euch gerne mit mir oder werft einen Blick auf die weiteren Plattformen auf denen ich aktiv bin.</p>
+                <p>Vernetzt euch gerne mit mir oder werft einen Blick auf die weiteren Plattformen auf denen ich aktiv
+                    bin.</p>
             </div>
             <div class="col-md-12">
                 <div class="center" data-sr="wait 0.8s then enter bottom ease 100px reset" id="myPic"></div>
@@ -246,22 +276,28 @@
             <div class="col-md-2"></div>
             <div class="col-md-4">
                 <ul class="social-media">
-                    <li><a href="https://github.com/joachimprinzbach" target="_blank"><i data-sr="wait 0.2s then enter bottom and ease 50px over 1s"
+                    <li><a href="https://github.com/joachimprinzbach" target="_blank"><i
+                            data-sr="wait 0.2s then enter bottom and ease 50px over 1s"
                             class="fa fa-github-square"></i></a>
                     </li>
-                    <li><a href="https://www.facebook.com/joachim.prinzbach" target="_blank"><i data-sr="wait 0.4s then enter bottom and ease 50px over 1.1s"
+                    <li><a href="https://www.facebook.com/joachim.prinzbach" target="_blank"><i
+                            data-sr="wait 0.4s then enter bottom and ease 50px over 1.1s"
                             class="fa fa-facebook-square"></i></a>
                     </li>
-                    <li><a href="https://twitter.com/Johaaachim" raget="_blank"><i data-sr="wait 0.6s then enter bottom and ease 50px over 1.2s"
-                                                                                   class="fa fa-twitter-square"></i></a>
+                    <li><a href="https://twitter.com/Johaaachim" raget="_blank"><i
+                            data-sr="wait 0.6s then enter bottom and ease 50px over 1.2s"
+                            class="fa fa-twitter-square"></i></a>
                     </li>
-                    <li><a href="plus.google.com/112944731438999521277" target="_blank"><i data-sr="wait 0.8s then enter bottom and ease 50px over 1.3s"
+                    <li><a href="plus.google.com/112944731438999521277" target="_blank"><i
+                            data-sr="wait 0.8s then enter bottom and ease 50px over 1.3s"
                             class="fa fa-google-plus-square"></i></a>
                     </li>
-                    <li><a href="ch.linkedin.com/in/joachimprinzbach" target="_blank"><i data-sr="wait 1.0s then enter bottom and ease 50px over 1.4s"
+                    <li><a href="ch.linkedin.com/in/joachimprinzbach" target="_blank"><i
+                            data-sr="wait 1.0s then enter bottom and ease 50px over 1.4s"
                             class="fa fa-linkedin-square"></i></a>
                     </li>
-                    <li><a href="https://www.xing.com/profile/Joachim_Prinzbach?sc_o=mxb_p" target="_blank"><i data-sr="wait 1.2s then enter bottom and ease 50px over 1.5s"
+                    <li><a href="https://www.xing.com/profile/Joachim_Prinzbach?sc_o=mxb_p" target="_blank"><i
+                            data-sr="wait 1.2s then enter bottom and ease 50px over 1.5s"
                             class="fa fa-xing-square"></i></a>
                     </li>
                 </ul>
