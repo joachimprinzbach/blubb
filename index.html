@@ -140,7 +140,7 @@
         </div>
         <div ng-repeat="post in vm.blogentries">
             <div class="row">
-                <div class="col-xs-4 col-md-2 col-md-offset-2">
+                <div class="col-xs-12 col-md-2 col-md-offset-2">
                     <div>
                         <p>Tag: 1, Montag, den 30.03.2015</p>
 
@@ -149,7 +149,7 @@
                         <a href="{{post.post_meta.gmaps}}" target="_blank">Karte der Tagesstrecke</a>
                     </div>
                 </div>
-                <div class="col-xs-8 col-md-6">
+                <div class="col-xs-12 col-md-6">
                     <h2 ng-bind-html="post.title | to_trusted"></h2>
 
                     <p ng-bind-html="post.content | to_trusted"></p>
