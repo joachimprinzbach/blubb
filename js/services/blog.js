@@ -3,7 +3,7 @@
 	angular
 		.module('blog')
 
-		.factory('blog', blog)
+		.factory('blog', blog);
 
 
 	blog.$inject = ['$resource'];
