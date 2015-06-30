@@ -22,7 +22,7 @@
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     <link href="bower_components/fluidbox/css/fluidbox.css" rel="stylesheet" type="text/css"/>
     <!-- endbuild -->
-    <link rel="stylesheet/less" type="text/css" href="css/styles.less"/>
+    <link rel="stylesheet/less" href="css/styles.less"/>
 </head>
 <body ng-app="blog" ng-controller="BlogEntry as vm" data-spy="scroll" data-target=".navbar">
 <nav class="navbar navbar-default navbar-fixed-top nav-close">
@@ -62,96 +62,119 @@
     </div>
 </header>
 <section id="usa-info" class="page-content light-tone">
-    <div class="container">
+    <div class="container-fluid">
         <h1 data-sr="enter bottom ease 100px"><i class="fa fa-bus"></i><span>&lt;/ </span>40 Tage
             Südwesten<span> &gt;</span></h1>
 
         <div ng-hide="vm.subscribed">
             <div class="row">
-                <p>Einfach die E-Mail Adresse angeben und auf abonnieren klicken. Schon wird man immer bei Neuigkeiten
-                    informiert.</p>
+                <div class="col-xs-12 col-md-8 col-md-offset-2">
+                    <h2>Blog abonnieren</h2>
+                </div>
             </div>
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-xs-12 col-md-8 col-md-offset-2">
+                    <p>Einfach die E-Mail Adresse angeben und auf 'Abonnieren' klicken. Schon wird man bei Neuigkeiten
+                        per E-Mail informiert.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-md-4 col-md-offset-2">
                     <input type="email" class="form-control" placeholder="email@mail.com" name="input"
                            ng-model="vm.email" required>
                 </div>
-                <div class="col-md-2">
+                <div class="col-xs-12 col-md-4">
                     <button class="btn btn-primary" type="button" ng-click='vm.go(vm.email)'>Abonnieren</button>
                 </div>
             </div>
         </div>
         <div class="row" id="subscriptionStatus">
-            <p>{{vm.subscribeStatus}}</p>
-        </div>
-        <div class="row">
-            <h2>Route</h2>
-
-            <div class="row">
-                <p>Las Vegas - Yosemite NP - San Francisco - Los Angeles - San Diego - Gran Canyon NP - Page - Monument
-                Valley - Moab Zion NP - Bryce NP - Las Vegas</p>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <img class="img-responsive" src="img/routeMap.png"/>
-                </div>
-                <div class="col-md-6">
-
-                </div>
-
+            <div class="col-xs-12">
+                <p class="text-error">{{vm.subscribeStatus}}</p>
             </div>
         </div>
         <div class="row">
+            <div class="col-xs-12 col-md-8 col-md-offset-2">
+                <h2>Geplante Route</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-8 col-md-offset-2">
+                <p>Las Vegas - Yosemite NP - San Francisco - Los Angeles - San Diego - Gran Canyon NP - Monument Valley
+                    - Moab - Zion NP - Bryce NP - Las Vegas</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-8 col-md-offset-2">
+                <img class="img-responsive" src="img/routeMap.png"/>
+            </div>
+            <div class="col-md-6">
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-md-8 col-md-offset-2">
             <h2>Wohnmobil</h2>
-
-            <div class="col-md-6">
-                <img class="img-responsive" src="img/c25.png"/>
-            </div>
-            <div class="col-md-6">
-                Die Wahl fiel auf ein ca. 7.5m langes Schiff, das C25 von El Monte.
-            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-md-4 col-md-offset-2">
+            <img class="img-responsive" src="img/c25.png"/>
+        </div>
+        <div class="col-xs-12 col-md-4">
+            Die Wahl fiel auf ein ca. 7.5m langes Schiff, das C25 von El Monte.
         </div>
     </div>
 </section>
 <section id="blog" class="page-content dark-tone section-blog">
-    <div class="container">
+    <div class="container-fluid">
         <h1 data-sr="enter bottom ease 100px"><i class="fa fa-wordpress"></i><span>&lt;/ </span>Blog - News &
             Bilder<span> &gt;</span>
         </h1>
 
-        <div ng-show="!vm.showspinner" id="spinner" col-sm-12>
-            <span class="fa fa-5x fa-spin fa-spinner"></span>
+        <div class="row">
+            <div ng-show="!vm.showspinner" id="spinner" class="col-xs-12 text-center">
+                <span class="fa fa-5x fa-spin fa-spinner center-column"></span>
+            </div>
         </div>
         <div ng-repeat="post in vm.blogentries">
             <div class="row">
-                <div class="col-sm-4">
+                <div class="col-xs-4 col-md-2 col-md-offset-2">
                     <div>
                         <p>Tag: 1, Montag, den 30.03.2015</p>
 
-                        <p>{{post.modified_gmt}}</p>
+                        <p>{{post.modified_gmt | date:"dd.MM.yyyy 'um' HH:mm:ss 'Uhr'"}}</p>
 
-                        <p>{{post.post_meta.gmaps}}</p>
+                        <a href="{{post.post_meta.gmaps}}" target="_blank">Karte der Tagesstrecke</a>
                     </div>
                 </div>
-                <div class="col-sm-8">
+                <div class="col-xs-8 col-md-6">
                     <h2 ng-bind-html="post.title | to_trusted"></h2>
 
                     <p ng-bind-html="post.content | to_trusted"></p>
                 </div>
             </div>
         </div>
-        <button data-sr="scale up 80%" type="button" class="btn btn-default" ng-click="vm.loadMoreResults()">Mehr
-            Posts
-        </button>
+        <div class="row">
+            <div class="col-xs-12 col-md-4 col-md-offset-2">
+                <button data-sr="scale up 80%" type="button" class="btn btn-primary" ng-click="vm.loadMoreResults()">
+                    Mehr Beiträge
+                </button>
+            </div>
+        </div>
     </div>
 </section>
 <section id="photo" class="page-content light-tone">
-    <div class="container">
+    <div class="container-fluid">
         <h1 data-sr="enter bottom ease 100px"><i
                 class="fa fa-camera"></i><span>&lt;/ </span>Fotografie<span> &gt;</span></h1>
 
         <div class="row">
-            <p>Bilder kommen von Tag zu Tag ;-)</p>
+            <div class="col-xs-12 col-md-8 col-md-offset-2">
+                <p>Bilder kommen von Tag zu Tag ;-)</p>
+
+            </div>
             <!--<div class="col-sm-4">
                 <a href="./img/_MG_8666.jpg">
                     <img src="./img/_MG_8666.jpg" alt="" />
@@ -188,12 +211,12 @@
     </div>
 </section>
 <section id="coding" class="page-content dark-tone section-web">
-    <div class="container">
+    <div class="container-fluid">
         <h1 data-sr="enter bottom ease 100px"><i class="fa fa-file-code-o"></i><span>&lt;/ </span>Coding the
             Website<span> &gt;</span></h1>
 
         <div class="row top-buffer">
-            <div class="col-sm-6">
+            <div class="col-sm-6 col-lg-4 col-lg-offset-2">
                 <i class="fa fa-5x fa-code"></i>
 
                 <h2>Eingesetzte Frameworks</h2>
@@ -203,7 +226,7 @@
                     Zugriff auf das Backend und Logik mit AngularJS (https://angularjs.org/). Für Scrolleffekte
                 </p>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-6 col-lg-4">
                 <i class="fa fa-5x fa-database"></i>
 
                 <h2>Backend</h2>
@@ -216,7 +239,7 @@
             </div>
         </div>
         <div class="row top-buffer">
-            <div class="col-sm-4">
+            <div class="col-sm-4 col-lg-3 col-lg-offset-2">
                 <i class="fa fa-4x fa-laptop"></i>
                 <i class="fa fa-5x fa-desktop"></i>
                 <i class="fa fa-3x fa-mobile"></i>
@@ -227,7 +250,7 @@
                     Mit media queries und dem mobile First sollte die Seite auch auf kleineren Mobile Devices
                     einigermassen benutzbar sein ;-)</p>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-4 col-lg-3">
                 <i class="fa fa-5x fa-code-fork"></i>
 
                 <h2>Source Control - Git</h2>
@@ -235,7 +258,7 @@
                 <p>Der Code ist auf GitHub frei verfügbar unter
                     https://github.com/joachimprinzbach/website-private. </p>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-4 col-lg-3">
                 <i class="fa fa-5x fa-ship"></i>
 
                 <h2>Build &amp; Deployment</h2>
@@ -248,7 +271,7 @@
     </div>
 </section>
 <footer id="contact" class="page-content accent-background bright-tone section-contact">
-    <div class="container text-center">
+    <div class="container-fluid text-center">
         <h1 data-sr="enter bottom ease 100px"><i class="fa fa-envelope"></i><span>&lt;/ </span>Kontakt - get in
             touch<span> &gt;</span></h1>
 
@@ -273,8 +296,7 @@
                 <p class="built"><span class="fa fa-code"></span> with lots of <span class="fa fa-heart"></span> on
                     a <span class="fa fa-apple"></span> - by Joachim Prinzbach 2015</p>
             </div>
-            <div class="col-md-2"></div>
-            <div class="col-md-4">
+            <div class="col-md-4 col-md-offset-2">
                 <ul class="social-media">
                     <li><a href="https://github.com/joachimprinzbach" target="_blank"><i
                             data-sr="wait 0.2s then enter bottom and ease 50px over 1s"

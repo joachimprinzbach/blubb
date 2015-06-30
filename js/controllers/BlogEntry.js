@@ -38,7 +38,7 @@
 
 		vm.go = function() {
 			blog.subscribe(vm.email).then(function (result) {
-				vm.subscribeStatus = 'Subscription erfolgreich! Du wirst ab sofort per Mail benachrichtigt, wenn es Neuigkeiten gibt!';
+				vm.subscribeStatus = 'Anmeldung erfolgreich! Du wirst ab sofort per Mail benachrichtigt, wenn es Neuigkeiten gibt!';
 				localStorageService.set('subscribed', true);
 				vm.subscribed = true;
 			}, function (error) {
