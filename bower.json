@@ -21,8 +21,7 @@
     "angular-bootstrap": "~0.13.0",
     "angular-resource": "~1.4.0",
     "angular-local-storage": "~0.2.2",
-    "fluidbox": "~1.4.3",
-    "angular-bootstrap-lightbox": "~0.6.1"
+    "photoswipe": "~4.0.8"
   },
   "resolutions": {
     "jquery": ">= 1.9.1"

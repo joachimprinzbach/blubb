@@ -16,8 +16,7 @@
 		vm.email = '';
 		vm.page = 1;
 		vm.subscribeStatus = '';
-		//vm.subscribed = localStorageService.get('subscribed');
-		vm.subscribed = false;
+		vm.subscribed = localStorageService.get('subscribed');
 
 		blog.getBlog(vm.page).then(function (results) {
 			vm.blogentries = results;

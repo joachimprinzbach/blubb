@@ -20,7 +20,6 @@
     <!-- build:css css/all.min.css -->
     <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-    <link href="bower_components/fluidbox/css/fluidbox.css" rel="stylesheet" type="text/css"/>
     <!-- endbuild -->
     <link rel="stylesheet/less" href="css/styles.less"/>
 </head>
@@ -119,7 +118,7 @@
         </div>
         <div class="row">
             <div class="col-xs-12 col-md-4 col-md-offset-2">
-                <!--<img class="img-responsive" src="img/c25.png"/>-->
+                <img class="img-responsive" src="img/c25.png"/>
             </div>
             <div class="col-xs-12 col-md-4">
                 Die Wahl fiel auf ein ca. 7.5m langes Schiff, das C25 von El Monte.
@@ -139,12 +138,10 @@
             </div>
         </div>
         <div ng-repeat="post in vm.blogentries">
-            <div class="row">
-                <div class="col-xs-12 col-md-2 col-md-offset-2">
+            <div class="row blogPost">
+                <div class="col-xs-12 col-md-2 col-md-offset-2  aside-blog">
                     <div>
-                        <p>Tag: 1, Montag, den 30.03.2015</p>
-
-                        <p>{{post.modified_gmt | date:"dd.MM.yyyy 'um' HH:mm:ss 'Uhr'"}}</p>
+                        <p>Eintrag vom {{post.modified_gmt | date:"dd.MM.yyyy 'um' HH:mm ' Uhr'"}}</p>
 
                         <a href="{{post.post_meta.gmaps}}" target="_blank">Karte der Tagesstrecke</a>
                     </div>
@@ -157,7 +154,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-xs-12 col-md-4 col-md-offset-2">
+            <div class="col-xs-12 col-md-4 col-md-offset-3">
                 <button data-sr="scale up 80%" type="button" class="btn btn-primary" ng-click="vm.loadMoreResults()">
                     Mehr Beiträge
                 </button>
@@ -173,38 +170,12 @@
         <div class="row">
             <div class="col-xs-12 col-md-8 col-md-offset-2">
                 <p>Bilder kommen von Tag zu Tag ;-)</p>
+                <button id="btn">Open PhotoSwipe</button>
 
             </div>
             <!--<div class="col-sm-4">
                 <a href="./img/_MG_8666.jpg">
                     <img src="./img/_MG_8666.jpg" alt="" />
-                </a>
-            </div>
-            <div class="col-sm-4">
-                <a href="./img/IMG_0611.jpg">
-                    <img src="./img/thumbs/IMG_0611.jpg" alt="" />
-                </a>
-            </div>
-            <div class="col-sm-4">
-                <a href="./img/_MG_3381.jpg">
-                    <img src="./img/thumbs/_MG_3381.jpg" alt="" />
-                </a>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-4">
-                <a href="./img/IMG_2466.jpg">
-                    <img src="./img/thumbs/IMG_2466.jpg" alt="" />
-                </a>
-            </div>
-            <div class="col-sm-4">
-                <a href="./img/_MG_3381.jpg">
-                    <img src="./img/thumbs/_MG_3381.jpg" alt="" />
-                </a>
-            </div>
-            <div class="col-sm-4">
-                <a href="./img/_MG_3381.jpg">
-                    <img src="./img/thumbs/_MG_3381.jpg" alt="" />
                 </a>
             </div>-->
         </div>
@@ -223,7 +194,7 @@
 
                 <p>Für das Grid wird Twitter bootstrap (http://getbootstrap.com/) genutzt, für die Icons FontAwesome
                     (http://fortawesome.github.io/Font-Awesome/).
-                    Zugriff auf das Backend und Logik mit AngularJS (https://angularjs.org/). Für Scrolleffekte
+                    Zugriff auf das Backend und Logik mit AngularJS (https://angularjs.org/). Für Scrolleffekte ScrollReveal.js.
                 </p>
             </div>
             <div class="col-sm-6 col-lg-4">
@@ -247,7 +218,7 @@
                 <h2>Responsive Design</h2>
 
                 <p>Ein paar Elemente des reponsive Designs wurden ausprobiert.
-                    Mit media queries und dem mobile First sollte die Seite auch auf kleineren Mobile Devices
+                    Mit media queries und dem mobile First Ansatz sollte die Seite auch auf kleineren Handys
                     einigermassen benutzbar sein ;-)</p>
             </div>
             <div class="col-sm-4 col-lg-3">
@@ -255,7 +226,7 @@
 
                 <h2>Source Control - Git</h2>
 
-                <p>Der Code ist auf GitHub frei verfügbar unter </p>
+                <p>Der Code ist auf GitHub frei verfügbar unter https://github.com/ joachimprinzbach/ website-private</p>
             </div>
             <div class="col-sm-4 col-lg-3">
                 <i class="fa fa-5x fa-ship"></i>
@@ -337,15 +308,11 @@
 <script src="js/script.js" type="text/javascript"></script>
 <script src="bower_components/angular-base64/angular-base64.js"></script>
 <script src="bower_components/scroll-reveal/dist/scrollReveal.min.js" type="text/javascript"></script>
-<script src="bower_components/fluidbox/jquery.fluidbox.min.js" type="text/javascript"></script>
 <script src="bower_components/less/dist/less.min.js" type="text/javascript"></script>
 <script type="text/javascript" src="js/app.js"></script>
 <script type="text/javascript" src="js/services/blog.js"></script>
 <script type="text/javascript" src="js/filters/toTrusted.js"></script>
 <script type="text/javascript" src="js/controllers/BlogEntry.js"></script>
 <!-- endbuild -->
-<script>
-    /*window.loading_screen.finish();*/
-</script>
 </body>
 </html>
